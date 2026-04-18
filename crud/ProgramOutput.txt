@@ -1,0 +1,110 @@
+================================================================================================
+          STUDENT CSV — COMPLETE CRUD DEMONSTRATION
+================================================================================================
+
+>>> CREATE — Writing CSV file with seed data <<<
+  Written : 1,Aanya Mehta,CSE,88.0,76.0,91.0,85.0,79.0,83.80
+  Written : 2,Rohan Kulkarni,ECE,72.0,68.0,80.0,74.0,66.0,72.00
+  File created successfully: Students.csv
+
+>>> READ — After initial file creation (2 seed rows) <<<
+------------------------------------------------------------------------------------------------
+| ID   | Name               | Branch       | M1    | M2    | M3    | M4    | M5    | Percent   |
+------------------------------------------------------------------------------------------------
+| 1    | Aanya Mehta        | CSE          |  88.0 |  76.0 |  91.0 |  85.0 |  79.0 |  83.80%  |
+| 2    | Rohan Kulkarni     | ECE          |  72.0 |  68.0 |  80.0 |  74.0 |  66.0 |  72.00%  |
+------------------------------------------------------------------------------------------------
+  Total records: 2
+
+>>> INSERT — Appending 3 new rows (marks4 & marks5 = 0) <<<
+  Inserted: 3,Priya Desai,IT,84.0,90.0,78.0,0.0,0.0,0.00
+  Inserted: 4,Karan Joshi,MECH,65.0,70.0,60.0,0.0,0.0,0.00
+  Inserted: 5,Sneha Patil,CIVIL,78.0,82.0,88.0,0.0,0.0,0.00
+
+>>> READ — After inserting 3 new rows (marks4 & marks5 = 0) <<<
+------------------------------------------------------------------------------------------------
+| ID   | Name               | Branch       | M1    | M2    | M3    | M4    | M5    | Percent   |
+------------------------------------------------------------------------------------------------
+| 1    | Aanya Mehta        | CSE          |  88.0 |  76.0 |  91.0 |  85.0 |  79.0 |  83.80%  |
+| 2    | Rohan Kulkarni     | ECE          |  72.0 |  68.0 |  80.0 |  74.0 |  66.0 |  72.00%  |
+| 3    | Priya Desai        | IT           |  84.0 |  90.0 |  78.0 |   0.0 |   0.0 |   0.00%  |
+| 4    | Karan Joshi        | MECH         |  65.0 |  70.0 |  60.0 |   0.0 |   0.0 |   0.00%  |
+| 5    | Sneha Patil        | CIVIL        |  78.0 |  82.0 |  88.0 |   0.0 |   0.0 |   0.00%  |
+------------------------------------------------------------------------------------------------
+  Total records: 5
+
+>>> UPDATE — Filling correct marks4 & marks5 for new students <<<
+  Student Priya Desai        | marks4: 0.0 -> 92.0  | marks5: 0.0 -> 87.0
+  Student Karan Joshi        | marks4: 0.0 -> 75.0  | marks5: 0.0 -> 68.0
+  Student Sneha Patil        | marks4: 0.0 -> 80.0  | marks5: 0.0 -> 95.0
+
+>>> UPDATE — Correct marks4 & marks5 written to file <<<
+  Updated : 1,Aanya Mehta,CSE,88.0,76.0,91.0,85.0,79.0,83.80
+  Updated : 2,Rohan Kulkarni,ECE,72.0,68.0,80.0,74.0,66.0,72.00
+  Updated : 3,Priya Desai,IT,84.0,90.0,78.0,92.0,87.0,0.00
+  Updated : 4,Karan Joshi,MECH,65.0,70.0,60.0,75.0,68.0,0.00
+  Updated : 5,Sneha Patil,CIVIL,78.0,82.0,88.0,80.0,95.0,0.00
+
+>>> READ — After updating marks4 & marks5 for all students <<<
+------------------------------------------------------------------------------------------------
+| ID   | Name               | Branch       | M1    | M2    | M3    | M4    | M5    | Percent   |
+------------------------------------------------------------------------------------------------
+| 1    | Aanya Mehta        | CSE          |  88.0 |  76.0 |  91.0 |  85.0 |  79.0 |  83.80%  |
+| 2    | Rohan Kulkarni     | ECE          |  72.0 |  68.0 |  80.0 |  74.0 |  66.0 |  72.00%  |
+| 3    | Priya Desai        | IT           |  84.0 |  90.0 |  78.0 |  92.0 |  87.0 |   0.00%  |
+| 4    | Karan Joshi        | MECH         |  65.0 |  70.0 |  60.0 |  75.0 |  68.0 |   0.00%  |
+| 5    | Sneha Patil        | CIVIL        |  78.0 |  82.0 |  88.0 |  80.0 |  95.0 |   0.00%  |
+------------------------------------------------------------------------------------------------
+  Total records: 5
+
+>>> CALCULATE & UPDATE — Percentage for every student <<<
+  Student Aanya Mehta        | Before:  83.80% -> After:  83.80%
+  Student Rohan Kulkarni     | Before:  72.00% -> After:  72.00%
+  Student Priya Desai        | Before:   0.00% -> After:  86.20%
+  Student Karan Joshi        | Before:   0.00% -> After:  67.60%
+  Student Sneha Patil        | Before:   0.00% -> After:  84.60%
+
+>>> UPDATE — Writing updated percentages to file <<<
+  Updated : 1,Aanya Mehta,CSE,88.0,76.0,91.0,85.0,79.0,83.80
+  Updated : 2,Rohan Kulkarni,ECE,72.0,68.0,80.0,74.0,66.0,72.00
+  Updated : 3,Priya Desai,IT,84.0,90.0,78.0,92.0,87.0,86.20
+  Updated : 4,Karan Joshi,MECH,65.0,70.0,60.0,75.0,68.0,67.60
+  Updated : 5,Sneha Patil,CIVIL,78.0,82.0,88.0,80.0,95.0,84.60
+
+>>> READ — After calculating & updating percentage for all students <<<
+------------------------------------------------------------------------------------------------
+| ID   | Name               | Branch       | M1    | M2    | M3    | M4    | M5    | Percent   |
+------------------------------------------------------------------------------------------------
+| 1    | Aanya Mehta        | CSE          |  88.0 |  76.0 |  91.0 |  85.0 |  79.0 |  83.80%  |
+| 2    | Rohan Kulkarni     | ECE          |  72.0 |  68.0 |  80.0 |  74.0 |  66.0 |  72.00%  |
+| 3    | Priya Desai        | IT           |  84.0 |  90.0 |  78.0 |  92.0 |  87.0 |  86.20%  |
+| 4    | Karan Joshi        | MECH         |  65.0 |  70.0 |  60.0 |  75.0 |  68.0 |  67.60%  |
+| 5    | Sneha Patil        | CIVIL        |  78.0 |  82.0 |  88.0 |  80.0 |  95.0 |  84.60%  |
+------------------------------------------------------------------------------------------------
+  Total records: 5
+
+>>> DELETE — Removing student with ID = 4 <<<
+  Deleted : 4,Karan Joshi,MECH,65.0,70.0,60.0,75.0,68.0,67.60
+  File updated after deletion.
+
+>>> READ — Final state after deleting student ID = 4 <<<
+------------------------------------------------------------------------------------------------
+| ID   | Name               | Branch       | M1    | M2    | M3    | M4    | M5    | Percent   |
+------------------------------------------------------------------------------------------------
+| 1    | Aanya Mehta        | CSE          |  88.0 |  76.0 |  91.0 |  85.0 |  79.0 |  83.80%  |
+| 2    | Rohan Kulkarni     | ECE          |  72.0 |  68.0 |  80.0 |  74.0 |  66.0 |  72.00%  |
+| 3    | Priya Desai        | IT           |  84.0 |  90.0 |  78.0 |  92.0 |  87.0 |  86.20%  |
+| 5    | Sneha Patil        | CIVIL        |  78.0 |  82.0 |  88.0 |  80.0 |  95.0 |  84.60%  |
+------------------------------------------------------------------------------------------------
+  Total records: 4
+
+>>> EXCEPTION DEMO — Deleting a non-existent student ID = 99 <<<
+  [Warning] Student with ID 99 not found.
+
+>>> EXCEPTION DEMO — Reading a non-existent file <<<
+  [IOException CAUGHT] FileNotFoundException: nonexistent_file.csv (No such file or directory)
+  => Gracefully handled. Program continues normally.
+
+================================================================================================
+  All CRUD operations completed successfully.
+================================================================================================
