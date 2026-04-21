@@ -1,10 +1,4 @@
 import java.time.LocalDate;
-
-/**
- * Contract Employee
- * CTC = numberOfHours * hourlyRate
- * (No designation-based branching needed for contract workers)
- */
 public class ContractEmployee extends Employee {
 
     private double numberOfHours;

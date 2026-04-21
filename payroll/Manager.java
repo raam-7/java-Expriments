@@ -1,9 +1,5 @@
 import java.time.LocalDate;
 
-/**
- * Manager — a Full-Time Employee with extra allowances.
- * CTC = baseSalary + performanceBonus + travelAllowance + educationAllowance
- */
 public class Manager extends FullTimeEmployee {
 
     private double travelAllowance;
